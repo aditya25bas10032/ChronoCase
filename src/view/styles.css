@@ -1,0 +1,446 @@
+/* ChronoCase - clean, modern, dark detective-desk theme. */
+
+.root {
+    -fx-font-family: "Segoe UI", "System";
+    -fx-font-size: 13px;
+    -fx-background-color: #1e2229;
+    -fx-text-fill: #e8eaed;
+}
+
+/* ----- header & sidebar shell ----- */
+
+.header-bar {
+    -fx-background-color: #262b33;
+    -fx-border-color: transparent transparent #3a4150 transparent;
+}
+
+.sidebar {
+    -fx-background-color: #22262d;
+    -fx-border-color: transparent #3a4150 transparent transparent;
+}
+
+.sidebar-title {
+    -fx-text-fill: #6b7687;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-footer {
+    -fx-text-fill: #5b6472;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+.button.nav-item {
+    -fx-background-color: transparent;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 6;
+}
+
+.button.nav-item:hover {
+    -fx-background-color: #2d333d;
+}
+
+.button.nav-item.nav-active {
+    -fx-background-color: #3d4a5d;
+    -fx-text-fill: #f0c34e;
+    -fx-font-weight: bold;
+}
+
+/* ----- structure ----- */
+
+.nav-bar {
+    -fx-background-color: #262b33;
+    -fx-border-color: transparent transparent #3a4150 transparent;
+}
+
+.case-heading {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f2f5;
+}
+
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f2f5;
+}
+
+.caption {
+    -fx-text-fill: #9aa5b5;
+    -fx-font-size: 12px;
+}
+
+.panel {
+    -fx-background-color: #262b33;
+    -fx-background-radius: 8;
+    -fx-border-color: #3a4150;
+    -fx-border-radius: 8;
+}
+
+.case-info {
+    -fx-font-size: 14px;
+    -fx-text-fill: #e8eaed;
+}
+
+.app-title {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f2f5;
+}
+
+.app-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #9aa5b5;
+    -fx-padding: 0 0 16 0;
+}
+
+/* ----- stat cards ----- */
+
+.stat-card {
+    -fx-background-color: #2d333d;
+    -fx-background-radius: 8;
+    -fx-padding: 8 18 8 18;
+    -fx-min-width: 110;
+}
+
+.stat-value {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d4a017;
+}
+
+.stat-caption {
+    -fx-text-fill: #9aa5b5;
+}
+
+/* ----- buttons ----- */
+
+.button {
+    -fx-background-color: #3a4150;
+    -fx-text-fill: #e8eaed;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-padding: 6 12 6 12;
+}
+
+.button:hover {
+    -fx-background-color: #454d5e;
+}
+
+.button:pressed {
+    -fx-background-color: #2d333d;
+}
+
+.button.accent {
+    -fx-background-color: #d4a017;
+    -fx-text-fill: #1e2229;
+    -fx-font-weight: bold;
+}
+
+.button.accent:hover {
+    -fx-background-color: #e6b422;
+}
+
+.button.danger {
+    -fx-background-color: #b34747;
+    -fx-text-fill: #ffffff;
+}
+
+.button.danger:hover {
+    -fx-background-color: #c65454;
+}
+
+/* ----- dialogs & alerts -----
+
+   Alerts and Dialogs build their own Scene without the app stylesheet,
+   so they fall back to the white Modena theme. ChronoCaseApp.styleDialog()
+   attaches this sheet to every dialog pane; these rules then re-skin the
+   standard dialog chrome (header, content, buttons). */
+
+.dialog-pane {
+    -fx-background-color: #1e2229;
+    -fx-border-color: #3a4150;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #262b33;
+}
+
+.dialog-pane .label {
+    -fx-text-fill: #e8eaed;
+}
+
+.dialog-pane .content {
+    -fx-background-color: #1e2229;
+}
+
+.alert .dialog-pane .header-panel,
+.alert .header-panel {
+    -fx-background-color: #262b33;
+}
+
+/* ----- inputs ----- */
+
+.text-field, .text-area, .combo-box-base {
+    -fx-background-color: #2d333d;
+    -fx-text-fill: #e8eaed;
+    -fx-prompt-text-fill: #6b7687;
+    -fx-highlight-fill: #d4a017;
+}
+
+.text-area .content {
+    -fx-background-color: #2d333d;
+    -fx-text-fill: #e8eaed;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #e8eaed;
+    -fx-background-color: #2d333d;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2d333d;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #454d5e;
+}
+
+.date-picker .cell {
+    -fx-text-fill: #1e2229;
+}
+
+/* Popup windows (combo box lists, date picker calendars) live in their
+   own scene too, so give them the dark background explicitly. */
+.combo-box-popup, .date-picker-popup {
+    -fx-background-color: #262b33;
+}
+
+/* Month/year header. Selectors verified against modena.css in
+   javafx-controls-26.jar: the pane is .month-year-pane holding a
+   .spinner with labels; there is no .month-year-label class. */
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #262b33;
+}
+
+.date-picker-popup > * > .spinner > .label {
+    -fx-text-fill: #e8eaed;
+}
+
+.date-picker-popup > .month-year-pane > .secondary-label {
+    -fx-text-fill: #f0c34e;
+}
+
+/* Calendar cells. Cell text uses -fx-text-fill (no .cell-data child
+   exists in modena.css). DateCell subclasses all carry .date-cell. */
+.date-picker-popup > * > .date-cell {
+    -fx-text-fill: #e8eaed;
+}
+
+.date-picker-popup > * > .day-name-cell {
+    -fx-text-fill: #9aa5b5;
+}
+
+.date-picker-popup > * > .previous-month,
+.date-picker-popup > * > .next-month {
+    -fx-text-fill: #6b7687;
+}
+
+/* ----- tables ----- */
+
+.table-view {
+    -fx-background-color: #262b33;
+    -fx-border-color: #3a4150;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #6b7687;
+}
+
+.table-view .column-header-background .fill-color {
+    -fx-background-color: #2d333d;
+}
+
+.table-view .column-header, .table-view .fill-color {
+    -fx-background-color: #2d333d;
+    -fx-size: 32;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #9aa5b5;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #262b33;
+    -fx-text-fill: #e8eaed;
+    -fx-border-color: transparent transparent #2d333d transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #292f38;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3d4a5d;
+}
+
+.table-row-cell .text {
+    -fx-text-fill: #e8eaed;
+}
+
+.table-row-cell:selected .text {
+    -fx-text-fill: #ffffff;
+}
+
+/* ----- timeline event rows ----- */
+
+.event-row {
+    -fx-padding: 4 8 4 8;
+    -fx-background-radius: 6;
+    -fx-background-color: #2d333d;
+}
+
+.event-root {
+    -fx-border-color: transparent transparent transparent #d4a017;
+}
+
+.event-branch {
+    -fx-border-color: transparent transparent transparent #4a90d9;
+}
+
+.event-now {
+    -fx-border-color: #d4a017;
+    -fx-border-width: 1;
+    -fx-background-color: #3a3420;
+}
+
+.timeline-chip {
+    -fx-background-color: #2f3a4d;
+    -fx-text-fill: #9ec3f0;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 12;
+    -fx-font-weight: bold;
+}
+
+.time-chip {
+    -fx-background-color: #3a3420;
+    -fx-text-fill: #f0c34e;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 12;
+}
+
+/* ----- time travel ----- */
+
+.travel-card {
+    -fx-background-color: #2d333d;
+    -fx-background-radius: 6;
+    -fx-padding: 6 10 6 10;
+}
+
+.travel-time {
+    -fx-text-fill: #f0c34e;
+    -fx-font-family: "Consolas", "monospace";
+}
+
+.travel-desc {
+    -fx-text-fill: #e8eaed;
+}
+
+.button.travel-button {
+    -fx-background-color: #2f5d8a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.button.travel-button:hover {
+    -fx-background-color: #3a70a8;
+}
+
+.button.travel-here {
+    -fx-background-color: #3a3420;
+    -fx-text-fill: #f0c34e;
+}
+
+.travel-choice {
+    -fx-text-fill: #f0c34e;
+    -fx-font-weight: bold;
+}
+
+/* ----- comparison diff colors ----- */
+
+.diff-identical {
+    -fx-background-color: #20302a;
+}
+
+.diff-identical .text {
+    -fx-fill: #8fd6a4;
+}
+
+.diff-changed {
+    -fx-background-color: #3a3420;
+}
+
+.diff-changed .text {
+    -fx-fill: #f0c34e;
+}
+
+.diff-missing {
+    -fx-background-color: #3a2424;
+}
+
+.diff-missing .text {
+    -fx-fill: #e08a8a;
+}
+
+/* ----- contradiction findings ----- */
+
+.finding-contradiction {
+    -fx-text-fill: #e08a8a;
+}
+
+.finding-support {
+    -fx-text-fill: #8fd6a4;
+}
+
+/* ----- solver ranking ----- */
+
+.ranking-first {
+    -fx-text-fill: #f0c34e;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.ranking-row {
+    -fx-text-fill: #e8eaed;
+    -fx-font-weight: bold;
+}
+
+.ranking-reason {
+    -fx-text-fill: #9aa5b5;
+    -fx-font-size: 12px;
+}
+
+.verdict-headline {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #d4a017;
+}
+
+.report {
+    -fx-font-family: "Consolas", "monospace";
+    -fx-font-size: 12px;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #454d5e;
+    -fx-background-radius: 4;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
