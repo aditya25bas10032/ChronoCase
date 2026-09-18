@@ -1,0 +1,13 @@
+# Normalize line endings across platforms
+* text=auto
+
+# Shell scripts must keep LF (CRLF breaks bash on Windows/Linux)
+*.sh text eol=lf
+
+# Windows scripts keep CRLF
+*.bat text eol=crlf
+
+# Java and resources
+*.java text
+*.css text
+*.md text

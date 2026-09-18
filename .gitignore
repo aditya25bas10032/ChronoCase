@@ -1,0 +1,22 @@
+# Build output
+out/
+bin/
+
+# Third-party jars (fetched with get-libraries.sh / get-libraries.bat)
+lib/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Agent/skills tooling (session-local, not part of the project)
+.agents/
+skills-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
